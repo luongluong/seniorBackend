@@ -5,7 +5,7 @@ import javax.persistence.Id;
 //design data or process data
 public class processData {
     @Id
-    private String id;
+    private int id;
 
     private String name;
     private String description;
@@ -14,17 +14,17 @@ public class processData {
 
     ///dont need
     public processData(){}
-    public processData(String id, String name, String description) {
+    public processData(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
