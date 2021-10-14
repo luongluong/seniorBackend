@@ -1,28 +1,37 @@
 package service;
-
+import dao.processDao;
+import dao.processDaoImpl;
 import entity.processData;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
+@Service
 
 public class processServiceImpl implements processService {
 //need the DAO before this one can be implemented
+    @Resource
+    processDao processDaoObj;
+
     @Override
-    public List<processData> findAll() {
-        return null;
+    public List<processData> listOfProcess() {
+        return processDaoObj.listOfProcess();
+    }
+
+
+
+    @Override
+    public void insertUserData(processData data) {
+        processDaoObj.insertProcess(data);
     }
 
     @Override
-    public void insertUserData(processData user) {
+    public void updateUserData(processData data) {
 
     }
 
     @Override
-    public void updateUserData(processData user) {
-
-    }
-
-    @Override
-    public void deleteUserData(processData user) {
+    public void deleteUserData(processData data) {
 
     }
 }

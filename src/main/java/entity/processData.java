@@ -1,8 +1,12 @@
 package entity;
 
+import javax.persistence.Id;
+
 //design data or process data
 public class processData {
+    @Id
     private String id;
+
     private String name;
     private String description;
     private String status;  //status of the record (active, inactive, deleted)
