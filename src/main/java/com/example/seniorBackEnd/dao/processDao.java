@@ -1,5 +1,5 @@
-package dao;
-import entity.processData;
+package com.example.seniorBackEnd.dao;
+import com.example.seniorBackEnd.entity.processData;
 
 import java.util.List;
 

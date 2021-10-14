@@ -1,6 +1,6 @@
-package service;
+package com.example.seniorBackEnd.service;
 
-import entity.processData;
+import com.example.seniorBackEnd.entity.processData;
 
 import java.util.List;
 

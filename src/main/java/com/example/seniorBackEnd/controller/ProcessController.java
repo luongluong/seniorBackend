@@ -1,25 +1,28 @@
-package controller;
-import  javax.annotation.Resource;
+package com.example.seniorBackEnd.controller;
 
-import entity.processData;
-import org.springframework.stereotype.Controller;
+import com.example.seniorBackEnd.entity.processData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.processService;
+import com.example.seniorBackEnd.service.processService;
 import java.util.List;
 
-@Controller
+@CrossOrigin(origins = "http://localhost:8080")
+@RestController
 @RequestMapping("/processData")
 public class ProcessController {
+
+    // private processDao dao;
     //modify controller
-    @Resource
+    // @Resource
+    @Autowired
     processService processServiceObj;
 
-    @GetMapping(value = "/processList")
+    @GetMapping( "/processList")
     public List<processData> getProcessData(){
         return processServiceObj.listOfProcess();
     }
 
-    @PostMapping(value = "/insertProcess")
+    @PostMapping( "/insertProcess")
     public void insertProcessData(@RequestBody processData data) {
         processServiceObj.insertUserData(data);
     }

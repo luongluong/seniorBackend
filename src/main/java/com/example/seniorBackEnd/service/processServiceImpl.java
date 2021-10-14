@@ -1,7 +1,6 @@
-package service;
-import dao.processDao;
-import dao.processDaoImpl;
-import entity.processData;
+package com.example.seniorBackEnd.service;
+import com.example.seniorBackEnd.dao.processDao;
+import com.example.seniorBackEnd.entity.processData;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

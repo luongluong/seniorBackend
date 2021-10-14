@@ -1,4 +1,4 @@
-package entity;
+package com.example.seniorBackEnd.entity;
 
 import javax.persistence.Id;
 
@@ -10,7 +10,7 @@ public class processData {
     private String name;
     private String description;
     private String status;  //status of the record (active, inactive, deleted)
-    private String design; //store Json
+    private byte[] design; //store Json
 
     ///dont need
     public processData(){}
@@ -52,11 +52,11 @@ public class processData {
         this.status = status;
     }
 
-    public String getDesign() {
+    public byte[] getDesign() {
         return design;
     }
 
-    public void setDesign(String design) {
+    public void setDesign(byte[] design) {
         this.design = design;
     }
 }

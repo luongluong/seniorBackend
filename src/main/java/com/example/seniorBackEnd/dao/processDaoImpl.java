@@ -1,6 +1,6 @@
-package dao;
+package com.example.seniorBackEnd.dao;
 
-import entity.processData;
+import com.example.seniorBackEnd.entity.processData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
