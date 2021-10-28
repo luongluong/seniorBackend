@@ -4,6 +4,7 @@ import com.example.seniorBackEnd.entity.processData;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.sql.SQLException;
 import java.util.List;
 @Service
 
@@ -20,17 +21,19 @@ public class processServiceImpl implements processService {
 
 
     @Override
-    public void insertUserData(processData data) {
+    public void insertUserData(processData data) throws SQLException {
         processDaoObj.insertProcess(data);
     }
 
     @Override
-    public void updateUserData(processData data) {
+    public void updateUserData(int data) {
+
 
     }
 
     @Override
-    public void deleteUserData(processData data) {
+    public void deleteUserData(int id) {
+        processDaoObj.deleteProcess(id);
 
     }
 }
